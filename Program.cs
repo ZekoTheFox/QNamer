@@ -12,7 +12,7 @@ namespace QNamer
 
             for (int f = 0; f < currentFiles.Length; f++)
             {
-                if (!currentFiles[f].Contains("QNamer.exe"))
+                if (!currentFiles[f].Contains(System.AppDomain.CurrentDomain.FriendlyName))
                     try
                     {
                         Console.WriteLine($"Attempting to rename [{currentFiles[f]}]...");
